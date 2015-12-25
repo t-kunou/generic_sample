@@ -1,7 +1,7 @@
 require 'indibidual'
 
 class Ga
-  def initialize(corrects, pattern_size = 4)
+  def initialize(corrects, pattern_size)
     @corrects = corrects
     @pattern_size = pattern_size
   end
@@ -53,6 +53,8 @@ class Ga
       pair.first == pair.last ? score.succ : score
     end
   end
+
+  private
 
   def print_geans_with_score(indibiduals)
     puts '#' * 50

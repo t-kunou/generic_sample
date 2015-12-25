@@ -3,7 +3,7 @@ require 'ga'
 
 describe 'Ga' do
   describe 'score' do
-    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3]) }
+    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3], 4) }
 
     subject { ga.score(answer) }
 
@@ -27,7 +27,7 @@ describe 'Ga' do
   end
 
   describe 'twist' do
-    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3]) }
+    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3], 4) }
     let(:array1) {[0, 1, 2, 3, 4, 5, 6, 7]}
     let(:array2) {[7, 6, 5, 4, 3, 2, 1, 0]}
 
@@ -53,7 +53,7 @@ describe 'Ga' do
   end
 
   describe 'first_generation' do
-    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3]) }
+    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3], 4) }
 
     subject { ga.first_generations(10) }
 
@@ -62,7 +62,7 @@ describe 'Ga' do
   end
 
   describe 'next_generations' do
-    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3]) }
+    let(:ga) { Ga.new([2, 4, 4, 3, 1, 3, 1, 4, 3, 3], 4) }
     let(:geans) {
       [
         [2, 4, 4, 3, 1, 3, 1, 4, 2, 3],
